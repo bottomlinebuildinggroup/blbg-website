@@ -99,8 +99,12 @@ p { margin: 0 0 1em; color: var(--slate-500); }
   min-height: 640px;
   display: flex; align-items: center;
 }
-.hero-graphic { position: absolute; inset: 0; z-index: 0; }
-.hero-graphic svg { width: 100%; height: 100%; }
+.hero-graphic { position: absolute; inset: 0; z-index: 0; overflow: hidden; }
+.hero-photo { width: 100%; height: 100%; object-fit: cover; object-position: center; }
+.hero-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(100deg, rgba(20,39,74,0.94) 0%, rgba(20,39,74,0.82) 32%, rgba(20,39,74,0.45) 62%, rgba(20,39,74,0.25) 100%);
+}
 .hero-content {
   position: relative; z-index: 1;
   max-width: var(--max-width);
@@ -203,9 +207,9 @@ p { margin: 0 0 1em; color: var(--slate-500); }
 }
 .promise-card { background: var(--cream-50); padding: 28px 24px; }
 .promise-card h3 { font-size: 1.05rem; margin-bottom: 0.4em; }
-.promise-card p { margin: 0; font-size: 0.9rem; }
-.promise-link { display: inline-block; margin-top: 12px; font-weight: 600; font-size: 0.9rem; color: var(--blue-500); }
-.promise-link:hover { color: var(--blue-300); }
+.promise-card p { margin: 0 0 0.8em; font-size: 0.9rem; }
+.promise-link { font-size: 0.85rem; font-weight: 600; color: var(--blue-500); }
+.promise-link:hover { text-decoration: underline; }
 
 /* ===== About ===== */
 .about { padding: 100px 0; }
