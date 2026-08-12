@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Where We Build | Bottom Line Building Group</title>
+<meta name="description" content="Bottom Line Building Group is based in Charlotte, NC and builds luxury custom homes across the full Charlotte Metro area and surrounding South Carolina communities.">
+<link rel="canonical" href="https://bottomlinebuildinggroup.com/where-we-build.html">
+
+<meta property="og:title" content="Where We Build | Bottom Line Building Group">
+<meta property="og:description" content="Bottom Line Building Group is based in Charlotte, NC and builds luxury custom homes across the full Charlotte Metro area and surrounding South Carolina communities.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://bottomlinebuildinggroup.com/where-we-build.html">
+<meta property="og:image" content="https://bottomlinebuildinggroup.com/assets/BLBG_Larger_Logo.png">
+
+<link rel="icon" href="assets/BLBG_Logo.png" type="image/png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="styles.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HomeAndConstructionBusiness",
+  "name": "Bottom Line Building Group",
+  "telephone": "+1-980-529-9213",
+  "email": "jeremy@bottomlinebuildinggroup.com",
+  "url": "https://bottomlinebuildinggroup.com/",
+  "image": "https://bottomlinebuildinggroup.com/assets/BLBG_Larger_Logo.png",
+  "description": "Luxury ground-up custom home builder based in Charlotte, NC, serving the full Charlotte Metro area including Lake Norman, Lake Wylie, Charlotte infill neighborhoods, suburban areas, and South Carolina communities.",
+  "areaServed": [
+    {"@type": "Place", "name": "Charlotte Metro, NC"},
+    {"@type": "Place", "name": "Lake Norman, NC"},
+    {"@type": "Place", "name": "Lake Wylie, SC"},
+    {"@type": "Place", "name": "Fort Mill, SC"},
+    {"@type": "Place", "name": "Rock Hill, SC"}
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Charlotte",
+    "addressRegion": "NC",
+    "postalCode": "28209",
+    "addressCountry": "US"
+  }
+}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="brand">
+      <img src="assets/BLBG_Logo.png" alt="Bottom Line Building Group" class="brand-mark">
+    </a>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="our-process.html">Our Process</a>
+      <a href="where-we-build.html" aria-current="page">Where We Build</a>
+      <a href="about.html">About</a>
+      <a href="our-promise.html">Our Promise</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="header-cta">
+      <a href="tel:+19805299213" class="phone-link">(980) 529-9213</a>
+      <a href="contact.html" class="btn btn-primary">Start Your Build</a>
+    </div>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+  <section class="page-header">
+    <div class="section-inner">
+      <p class="eyebrow">Where We Build</p>
+      <h1>Serving Charlotte Metro and beyond.</h1>
+      <p class="page-header-sub">Based in Charlotte, NC 28209 — building across the full metro area.</p>
+    </div>
+  </section>
+  <section class="areas">
+    <div class="section-inner">
+      <div class="areas-grid">
+        <div class="area-card">
+          <h3>Lake Norman &amp; Lake Wylie</h3>
+          <p>Cornelius · Belmont · Mooresville · Tega Cay · Denver · Troutman</p>
+        </div>
+        <div class="area-card">
+          <h3>Charlotte Infill Neighborhoods</h3>
+          <p>Myers Park · Dilworth · Cotswold · SouthPark · Plaza Midwood · Sedgefield · Cherry</p>
+        </div>
+        <div class="area-card">
+          <h3>Suburban Areas</h3>
+          <p>Mount Holly · Ballantyne · Weddington · Waxhaw · Pineville · Monroe · Indian Trail</p>
+        </div>
+        <div class="area-card">
+          <h3>South Carolina Communities</h3>
+          <p>Rock Hill · Fort Mill · Indian Land · Grover · Clover · Indian Hook</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="section-inner footer-inner">
+    <img src="assets/BLBG_Logo.png" alt="Bottom Line Building Group" class="footer-mark">
+    <p>&copy; <span id="year"></span> Bottom Line Building Group. All rights reserved. Charlotte, NC 28209.</p>
+    <a href="tel:+19805299213">(980) 529-9213</a>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+  const toggle = document.querySelector('.nav-toggle');
+  const nav = document.querySelector('.site-nav');
+  toggle.addEventListener('click', () => {
+    const open = nav.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', open);
+  });
+</script>
+
+</body>
+</html>

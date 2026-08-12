@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us | Bottom Line Building Group</title>
+<meta name="description" content="Meet Jeremy Bottoms, CEO and owner of Bottom Line Building Group, and learn the mission behind Charlotte Metro's disciplined luxury custom home builder.">
+<link rel="canonical" href="https://bottomlinebuildinggroup.com/about.html">
+
+<meta property="og:title" content="About Us | Bottom Line Building Group">
+<meta property="og:description" content="Meet Jeremy Bottoms, CEO and owner of Bottom Line Building Group, and learn the mission behind Charlotte Metro's disciplined luxury custom home builder.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://bottomlinebuildinggroup.com/about.html">
+<meta property="og:image" content="https://bottomlinebuildinggroup.com/assets/BLBG_Larger_Logo.png">
+
+<link rel="icon" href="assets/BLBG_Logo.png" type="image/png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="styles.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HomeAndConstructionBusiness",
+  "name": "Bottom Line Building Group",
+  "telephone": "+1-980-529-9213",
+  "email": "jeremy@bottomlinebuildinggroup.com",
+  "url": "https://bottomlinebuildinggroup.com/",
+  "image": "https://bottomlinebuildinggroup.com/assets/BLBG_Larger_Logo.png",
+  "description": "Luxury ground-up custom home builder based in Charlotte, NC, serving the full Charlotte Metro area including Lake Norman, Lake Wylie, Charlotte infill neighborhoods, suburban areas, and South Carolina communities.",
+  "areaServed": [
+    {"@type": "Place", "name": "Charlotte Metro, NC"},
+    {"@type": "Place", "name": "Lake Norman, NC"},
+    {"@type": "Place", "name": "Lake Wylie, SC"},
+    {"@type": "Place", "name": "Fort Mill, SC"},
+    {"@type": "Place", "name": "Rock Hill, SC"}
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Charlotte",
+    "addressRegion": "NC",
+    "postalCode": "28209",
+    "addressCountry": "US"
+  }
+}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="brand">
+      <img src="assets/BLBG_Logo.png" alt="Bottom Line Building Group" class="brand-mark">
+    </a>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="our-process.html">Our Process</a>
+      <a href="where-we-build.html">Where We Build</a>
+      <a href="about.html" aria-current="page">About</a>
+      <a href="our-promise.html">Our Promise</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="header-cta">
+      <a href="tel:+19805299213" class="phone-link">(980) 529-9213</a>
+      <a href="contact.html" class="btn btn-primary">Start Your Build</a>
+    </div>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+  <section class="page-header">
+    <div class="section-inner">
+      <p class="eyebrow">Our Mission</p>
+      <h1>Built on discipline, faith, and craftsmanship.</h1>
+      
+    </div>
+  </section>
+  <section class="about">
+    <div class="section-inner about-grid">
+      <div class="about-photo">
+        <div class="photo-placeholder" aria-hidden="true">
+          <span>Jeremy Bottoms<br>headshot</span>
+        </div>
+      </div>
+      <div class="about-copy">
+        <h2>Built on a simple idea: run every dollar like it's yours.</h2>
+        <p class="mission-statement">Grounded in Colossians 3:17 and 3:23 — working at everything as an act of service, not just a job — our mission is to deliver luxury custom homes with the same discipline, communication, and craftsmanship that turns a stressful build into one you actually enjoy.</p>
+        <p>Bottom Line Building Group was founded by Jeremy Bottoms to bring that same disciplined, client-first, faith-driven approach to ground-up luxury custom homes across Charlotte Metro.</p>
+        <p>The goal is straightforward — a distinctive home, delivered on budget and on plan, built by a team that treats your project's bottom line the way we'd treat our own.</p>
+        <p class="signature">Jeremy Bottoms<br><span>CEO &amp; Owner, Bottom Line Building Group</span></p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="section-inner footer-inner">
+    <img src="assets/BLBG_Logo.png" alt="Bottom Line Building Group" class="footer-mark">
+    <p>&copy; <span id="year"></span> Bottom Line Building Group. All rights reserved. Charlotte, NC 28209.</p>
+    <a href="tel:+19805299213">(980) 529-9213</a>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+  const toggle = document.querySelector('.nav-toggle');
+  const nav = document.querySelector('.site-nav');
+  toggle.addEventListener('click', () => {
+    const open = nav.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', open);
+  });
+</script>
+
+</body>
+</html>
