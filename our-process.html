@@ -74,7 +74,7 @@
 </header>
 
 <main id="main">
-  <section class="page-header">
+  <section class="page-header page-header-blueprint">
     <div class="section-inner">
       <p class="eyebrow">How It Works</p>
       <h1>From land to keys, in four disciplined stages.</h1>
@@ -115,6 +115,56 @@
       </ol>
     </div>
   </section>
+
+  <section class="styles-section">
+    <div class="section-inner">
+      <p class="eyebrow">Design Direction</p>
+      <h2>Architecture we build toward.</h2>
+      <div class="styles-grid">
+        <div class="style-card">
+          <h3>Transitional</h3>
+          <p>Clean lines balanced with warm, livable details. A blend of classic proportions and contemporary finishes.</p>
+        </div>
+        <div class="style-card">
+          <h3>European Contemporary</h3>
+          <p>Stucco, stone accents, and sculptural rooflines, refined and understated rather than ornate.</p>
+        </div>
+        <div class="style-card">
+          <h3>Modern Coastal</h3>
+          <p>Light-filled, natural materials, and indoor-outdoor flow suited to the Carolinas' lake and metro settings.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="roofline-divider" aria-hidden="true">
+    <svg viewBox="0 0 200 20" preserveAspectRatio="none"><polyline points="0,20 40,20 60,4 80,20 120,20 140,4 160,20 200,20" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+  </div>
+
+  <section class="faq">
+    <div class="section-inner">
+      <p class="eyebrow">Common Questions</p>
+      <h2>What to expect, before you start.</h2>
+      <div class="faq-list">
+        <div class="faq-item">
+          <h3>Do I need to already own land?</h3>
+          <p>No. Many clients come to us before they've found a lot. Land evaluation against real comp data is the first stage of our process, not a prerequisite for starting a conversation.</p>
+        </div>
+        <div class="faq-item">
+          <h3>How long does a custom build typically take?</h3>
+          <p>Land to close generally runs several months to about a year, depending on permitting timelines, site conditions, and the scope of the home. We'll give you a realistic estimate specific to your project once we understand it.</p>
+        </div>
+        <div class="faq-item">
+          <h3>What if I'm a real estate company, not a homeowner?</h3>
+          <p>We work with both. If you're a real estate company or developer looking for a contractor to build homes for you, the process starts the same way, a conversation about scope, timeline, and target areas.</p>
+        </div>
+        <div class="faq-item">
+          <h3>How involved will I be during construction?</h3>
+          <p>As involved as you want to be. Weekly cost-to-complete tracking means you always know where the project stands, whether you check in daily or prefer periodic updates.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 </main>
 
 <footer class="site-footer">
@@ -133,6 +183,10 @@
     const open = nav.classList.toggle('open');
     toggle.setAttribute('aria-expanded', open);
   });
+  const header = document.querySelector('.site-header');
+  window.addEventListener('scroll', () => {
+    header.classList.toggle('scrolled', window.scrollY > 8);
+  }, { passive: true });
 </script>
 
 </body>

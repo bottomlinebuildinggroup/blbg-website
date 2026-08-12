@@ -74,7 +74,7 @@
 </header>
 
 <main id="main">
-  <section class="page-header">
+  <section class="page-header page-header-photo" style="background-image: linear-gradient(100deg, rgba(20,39,74,0.92) 0%, rgba(20,39,74,0.72) 45%, rgba(20,39,74,0.55) 100%), url('assets/handshake.jpg');">
     <div class="section-inner">
       <p class="eyebrow">Start Your Build</p>
       <h1>Let's build something disciplined, distinctive, and yours.</h1>
@@ -126,6 +126,10 @@
     const open = nav.classList.toggle('open');
     toggle.setAttribute('aria-expanded', open);
   });
+  const header = document.querySelector('.site-header');
+  window.addEventListener('scroll', () => {
+    header.classList.toggle('scrolled', window.scrollY > 8);
+  }, { passive: true });
 </script>
 
 </body>

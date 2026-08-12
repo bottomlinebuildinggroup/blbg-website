@@ -94,7 +94,7 @@
       <div class="pillar">
         <span class="pillar-mark">01</span>
         <h3>Cost discipline, built in</h3>
-        <p>Weekly cost-to-complete tracking and fixed-scope budgeting keep your build on plan. It's the same rigor a seasoned renovation contractor brings to every job.</p>
+        <p>Weekly cost-to-complete tracking and fixed-scope budgeting keep your build on plan, with the same rigor a seasoned renovation contractor brings to every job.</p>
       </div>
       <div class="pillar">
         <span class="pillar-mark">02</span>
@@ -148,6 +148,10 @@
     const open = nav.classList.toggle('open');
     toggle.setAttribute('aria-expanded', open);
   });
+  const header = document.querySelector('.site-header');
+  window.addEventListener('scroll', () => {
+    header.classList.toggle('scrolled', window.scrollY > 8);
+  }, { passive: true });
 </script>
 
 </body>

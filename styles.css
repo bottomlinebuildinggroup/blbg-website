@@ -74,7 +74,9 @@ p { margin: 0 0 1em; color: var(--slate-500); }
   position: sticky; top: 0; z-index: 100;
   background: var(--white);
   border-bottom: 1px solid #ECE9E2;
+  transition: box-shadow 0.2s ease;
 }
+.site-header.scrolled { box-shadow: 0 4px 16px rgba(20,39,74,0.08); }
 .header-inner {
   max-width: var(--max-width);
   margin: 0 auto;
@@ -143,15 +145,49 @@ p { margin: 0 0 1em; color: var(--slate-500); }
 .page-header .eyebrow { color: var(--blue-300); }
 .page-header h1 { color: var(--white); font-size: clamp(2rem, 4vw, 2.8rem); max-width: 18ch; }
 .page-header-sub { color: var(--slate-300); font-size: 1.05rem; max-width: 46ch; margin: 0.6em 0 0; }
+.page-header-photo { background-size: cover; background-position: center; padding: 100px 0 80px; }
+.page-header-blueprint {
+  background-image:
+    linear-gradient(rgba(75,156,211,0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(75,156,211,0.08) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+/* ===== Photo Break ===== */
+.photo-break { width: 100%; line-height: 0; }
+.photo-break img { width: 100%; height: 420px; object-fit: cover; }
+
+/* ===== Design Styles ===== */
+.styles-section { padding: 90px 0; background: var(--cream-50); }
+.styles-section h2 { max-width: 16ch; font-size: clamp(1.8rem, 3vw, 2.4rem); }
+.styles-grid { margin-top: 44px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.style-card {
+  background: var(--white); padding: 32px 28px; border-radius: var(--radius);
+  border-top: 3px solid var(--blue-500);
+  box-shadow: 0 1px 3px rgba(20,39,74,0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.style-card:hover { transform: translateY(-4px); box-shadow: 0 12px 24px rgba(20,39,74,0.12); }
+.style-card h3 { font-size: 1.15rem; margin-bottom: 0.5em; }
+.style-card p { margin: 0; font-size: 0.95rem; }
+
+/* ===== FAQ ===== */
+.faq { padding: 90px 0 100px; }
+.faq h2 { max-width: 18ch; font-size: clamp(1.8rem, 3vw, 2.4rem); }
+.faq-list { margin-top: 44px; display: grid; grid-template-columns: 1fr 1fr; gap: 32px 48px; }
+.faq-item { border-left: 3px solid var(--blue-300); padding-left: 20px; }
+.faq-item h3 { font-size: 1.05rem; margin-bottom: 0.5em; }
+.faq-item p { margin: 0; font-size: 0.95rem; }
 
 /* ===== Homepage Teasers ===== */
 .teasers { padding: 90px 0 100px; }
 .teasers-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
 .teaser-card {
   display: block; padding: 32px 28px; border: 1px solid #E4DFD4; border-radius: var(--radius);
-  transition: border-color 0.15s ease;
+  box-shadow: 0 1px 3px rgba(20,39,74,0.05);
+  transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
 }
-.teaser-card:hover { border-color: var(--blue-500); }
+.teaser-card:hover { border-color: var(--blue-500); transform: translateY(-4px); box-shadow: 0 12px 24px rgba(20,39,74,0.1); }
 .teaser-card h3 { margin-bottom: 0.4em; }
 .teaser-card p { margin-bottom: 1.2em; }
 .teaser-link { font-weight: 600; font-size: 0.9rem; color: var(--blue-500); }
@@ -192,7 +228,8 @@ p { margin: 0 0 1em; color: var(--slate-500); }
   display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px;
   background: #ECE9E2; border: 1px solid #ECE9E2;
 }
-.area-card { background: var(--cream-50); padding: 32px; }
+.area-card { background: var(--cream-50); padding: 32px; transition: background 0.2s ease; }
+.area-card:hover { background: var(--white); box-shadow: inset 0 0 0 1px var(--blue-300); }
 .area-card h3 { font-size: 1.15rem; margin-bottom: 0.4em; }
 .area-card p { margin: 0; font-size: 0.95rem; }
 
@@ -205,7 +242,9 @@ p { margin: 0 0 1em; color: var(--slate-500); }
   display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px;
   background: #DCE7F0; border: 1px solid #DCE7F0;
 }
-.promise-card { background: var(--cream-50); padding: 28px 24px; }
+.promise-card { background: var(--cream-50); padding: 28px 24px; transition: background 0.2s ease; }
+.promise-card:hover { background: var(--white); box-shadow: inset 0 0 0 1px var(--blue-300); }
+.promise-icon { width: 40px; height: 40px; color: var(--blue-500); margin-bottom: 14px; }
 .promise-card h3 { font-size: 1.05rem; margin-bottom: 0.4em; }
 .promise-card p { margin: 0 0 0.8em; font-size: 0.9rem; }
 .promise-link { font-size: 0.85rem; font-weight: 600; color: var(--blue-500); }
@@ -259,6 +298,9 @@ p { margin: 0 0 1em; color: var(--slate-500); }
   .areas-grid { grid-template-columns: 1fr; }
   .promise-grid { grid-template-columns: 1fr 1fr; }
   .teasers-grid { grid-template-columns: 1fr; }
+  .styles-grid { grid-template-columns: 1fr; }
+  .faq-list { grid-template-columns: 1fr; }
+  .photo-break img { height: 280px; }
   .site-nav {
     position: absolute; top: 100%; left: 0; right: 0;
     background: var(--white); flex-direction: column; padding: 20px 32px; gap: 18px;
