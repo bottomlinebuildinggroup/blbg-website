@@ -115,7 +115,7 @@ p { margin: 0 0 1em; color: var(--slate-500); }
 }
 .hero-slogan {
   position: absolute;
-  top: 27%;
+  top: 16%;
   right: 5%;
   margin: 0;
   font-family: var(--font-display);
@@ -342,7 +342,7 @@ p { margin: 0 0 1em; color: var(--slate-500); }
   .hero-content { padding: 70px 20px 90px; }
   .brand-mark { height: 54px; }
   .promise-grid { grid-template-columns: 1fr; }
-  .hero-slogan { top: 25%; right: 5%; font-size: clamp(0.7rem, 3vw, 1rem); }
+  .hero-slogan { top: 13%; right: 5%; font-size: clamp(0.7rem, 3vw, 1rem); }
 }
 
 /* ===== Reduced motion ===== */
