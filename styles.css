@@ -84,6 +84,12 @@ p { margin: 0 0 1em; color: var(--slate-500); }
   display: flex; align-items: center; justify-content: space-between; gap: 24px;
 }
 .brand-mark { height: 72px; width: auto; }
+.brand { display: flex; align-items: center; gap: 14px; }
+.brand-tagline {
+  font-family: var(--font-display); font-style: italic; font-weight: 300;
+  font-size: 0.95rem; color: var(--slate-500); white-space: nowrap;
+  border-left: 1px solid #E4DFD4; padding-left: 14px;
+}
 .site-nav { display: flex; gap: 28px; font-weight: 500; font-size: 0.95rem; }
 .site-nav a:hover { color: var(--blue-500); }
 .header-cta { display: flex; align-items: center; gap: 20px; }
@@ -107,6 +113,22 @@ p { margin: 0 0 1em; color: var(--slate-500); }
   position: absolute; inset: 0;
   background: linear-gradient(100deg, rgba(20,39,74,0.94) 0%, rgba(20,39,74,0.82) 32%, rgba(20,39,74,0.45) 62%, rgba(20,39,74,0.25) 100%);
 }
+.hero-slogan {
+  position: absolute;
+  top: 27%;
+  right: 5%;
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 300;
+  font-style: italic;
+  color: rgba(255,255,255,0.94);
+  text-shadow: 0 2px 20px rgba(20,39,74,0.6), 0 1px 4px rgba(20,39,74,0.45);
+  font-size: clamp(1.1rem, 2.6vw, 2.1rem);
+  letter-spacing: 0.01em;
+  text-align: right;
+  white-space: nowrap;
+}
+.hero-slogan span { color: var(--blue-300); font-style: normal; }
 .hero-content {
   position: relative; z-index: 1;
   max-width: var(--max-width);
@@ -287,12 +309,15 @@ p { margin: 0 0 1em; color: var(--slate-500); }
 /* ===== Footer ===== */
 .site-footer { background: var(--navy-800); color: var(--slate-300); padding: 36px 0; }
 .footer-inner { display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
+.footer-brand { display: flex; align-items: center; gap: 14px; }
 .footer-mark { height: 34px; width: auto; filter: brightness(0) invert(1) opacity(0.85); }
+.footer-tagline { font-family: var(--font-display); font-style: italic; font-size: 0.85rem; color: var(--slate-300); }
 .footer-inner p { margin: 0; font-size: 0.85rem; }
 .footer-inner a { font-size: 0.85rem; font-weight: 600; color: var(--blue-300); }
 
 /* ===== Responsive ===== */
 @media (max-width: 880px) {
+  .brand-tagline { display: none; }
   .pillars .section-inner { grid-template-columns: 1fr; gap: 40px; }
   .about-grid, .contact-grid { grid-template-columns: 1fr; }
   .areas-grid { grid-template-columns: 1fr; }
@@ -317,6 +342,7 @@ p { margin: 0 0 1em; color: var(--slate-500); }
   .hero-content { padding: 70px 20px 90px; }
   .brand-mark { height: 54px; }
   .promise-grid { grid-template-columns: 1fr; }
+  .hero-slogan { top: 25%; right: 5%; font-size: clamp(0.7rem, 3vw, 1rem); }
 }
 
 /* ===== Reduced motion ===== */
