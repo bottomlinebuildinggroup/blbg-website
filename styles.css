@@ -326,6 +326,19 @@ p { margin: 0 0 1em; color: var(--slate-500); }
   .site-nav.open { display: flex; }
   .nav-toggle { display: block; }
   .header-cta .phone-link { display: none; }
+  .hero-photo { position: absolute; inset: 0; }
+  .hero-slogan {
+    position: relative;
+    z-index: 1;
+    top: auto;
+    right: auto;
+    display: block;
+    width: 100%;
+    padding: 22px 20px 0;
+    text-align: center;
+    white-space: normal;
+    font-size: clamp(1rem, 4vw, 1.4rem);
+  }
 }
 
 @media (max-width: 560px) {
@@ -334,7 +347,7 @@ p { margin: 0 0 1em; color: var(--slate-500); }
   .hero-content { padding: 70px 20px 90px; }
   .brand-mark { height: 54px; }
   .promise-grid { grid-template-columns: 1fr; }
-  .hero-slogan { top: 13%; right: 5%; font-size: clamp(0.7rem, 3vw, 1rem); }
+  .hero-slogan { font-size: clamp(0.85rem, 3.6vw, 1rem); }
 }
 
 /* ===== Reduced motion ===== */
